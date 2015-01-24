@@ -8,14 +8,21 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-You should create one R script called run_analysis.R that does the following. 
+Note that I've removed the space in the folder name --> UCIHARDataset
+UCIHARDataset is the data that contains the raw datasets. Only these following files were used:
+features.txt
+X_train.txt
+X_test.txt
+subject_test.txt
+subject_train.txt
+y_test.txt
+y_train.txt
 
-### Merges the training and the test sets to create one data set.
-The dataframe merge was merged based on the following picture found on our discussion form
+The raw data files were merged based on the following picture found on our discussion form
 https://coursera-forum-screenshots.s3.amazonaws.com/ab/a2776024af11e4a69d5576f8bc8459/Slide2.png
-There is also a copy of the image called "DF_GUIDELINE.png" in the same directory
+There is also a copy of the image called "DF_GUIDELINE.png" in the same directory. The finaltidy.txt is merged and shaped into one dataset base on the depicated guideline. 
 
-### Extracts only the measurements on the mean and standard deviation for each measurement. 
-### Uses descriptive activity names to name the activities in the data set
-### Appropriately labels the data set with descriptive variable names. 
-### From the data set in step 4, creates a second, independent tidy data set with the average of each variable for ### each activity and each subject.
+
+The merged dataset does not include the inertial folder. Because a subsequent steps calls on us to get rid of all the variables that are not to do with mean or standard deviation (worked out from the column names- the features).
+
+The step-by-step instructions on the data merging process are included in the run_analysis.R file. 
